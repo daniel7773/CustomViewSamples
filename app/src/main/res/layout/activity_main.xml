@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.example.customviewsamples.customscroll.CustomScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.example.customviewsamples.mygame.GameView
+                android:id="@+id/gameView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.example.customviewsamples.chart.ChartView
+                android:id="@+id/chartView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.example.customviewsamples.imagetext.DrawTextView
+                android:id="@+id/drawTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"/>
+
+            <com.example.customviewsamples.football.TeamView
+                android:id="@+id/teamView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.example.customviewsamples.moving_square.MyView
+                android:id="@+id/myView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+            <com.example.customviewsamples.chart.BackgroundBubblesView
+                android:id="@+id/bubblesView"
+                android:layout_width="match_parent"
+                android:layout_height="300dp" />
+
+        </LinearLayout>
+
+    </com.example.customviewsamples.customscroll.CustomScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

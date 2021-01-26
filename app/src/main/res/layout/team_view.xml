@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/teamWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/team_members_flow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="4dp"
+        app:flow_horizontalGap="8dp"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/team_shirt"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/team_shirt_outline"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/team_attack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="2dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:drawableTint="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/team_defence"
+        app:layout_constraintStart_toEndOf="@id/team_shirt"
+        app:layout_constraintTop_toTopOf="@id/team_shirt"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/team_defence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="2dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:drawableTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/team_shirt"
+        app:layout_constraintStart_toEndOf="@id/team_shirt"
+        app:layout_constraintTop_toBottomOf="@id/team_attack" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
